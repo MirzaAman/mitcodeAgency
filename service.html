@@ -25,6 +25,8 @@
    <link rel="stylesheet" href="assets/css/magnific-popup.css">
    <link rel="stylesheet" href="assets/css/spacing.css">
    <link rel="stylesheet" href="assets/css/style.css">
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 </head>
 
 <body>
@@ -427,12 +429,12 @@
                            </h4>
                         </div>
                         <div class="tpcontact__form">
-                           <form action="#">
-                              <input type="text" placeholder="Company name">
-                              <input type="email" placeholder="Enter your mail">
-                              <textarea placeholder="Enter your message"></textarea>
-                           </form>
-                           <button class="tp-btn">Let,s Talk</button>
+                           <div id="ContactForm">
+                              <input type="text" placeholder="Name" id="ContactName">
+                              <input type="email" placeholder="Enter your mail" id="ContactEmail">
+                              <textarea placeholder="Enter your message" id="ContactMessage"></textarea>
+                           </div>
+                           <button class="tp-btn" id="ContactButton">Let,s Talk</button>
                         </div>
                      </div>
                   </div>
@@ -505,10 +507,12 @@
                         <div class="col-lg-6 col-md-12 col-12">
                            <div class="tp-newsletter">
                               <div class="tp-newsletter__input p-relative">
-                                 <form action="#">
-                                    <input type="email" placeholder="Enter your mail">
-                                    <button class="tp-btn-yellow">Subscribe <i class="far fa-arrow-right"></i></button>
-                                 </form>
+                                 <div id="subscribe-form">
+                                    <input type="email" id="email-input" placeholder="Enter your mail" required>
+                                    <button type="submit" class="tp-btn-yellow" id="subscribe-button">
+                                       Subscribe <i class="far fa-arrow-right"></i>
+                                    </button>
+                                 </div>
                               </div>
                            </div>
                         </div>
@@ -520,31 +524,120 @@
                <div class="row">
                   <div class="col-xl-6 col-lg-7 col-12">
                      <div class="copyright-left text-center text-lg-start">
-                        <p>©Copy RIght @2024 All Rights Reserved - MIT code Digital Agency</p>
+                        <p>©Copy RIght @2024 All Rights Reserved - MIT Code</p>
                      </div>
                   </div>
-                  <!-- <div class="col-xl-6 col-lg-5 col-12">
-                     <div class="copyright-right-side text-center text-lg-end">
-                        <ul>
-                           <li><a href="#">Privacy Policy</a></li>
-                           <li><a href="#">Terms of Use</a></li>
-                           <li><a href="#">Sales and Refunds</a></li>
-                        </ul>
-                     </div>
-                  </div> -->
                </div>
-            </div>
+           </div>
          </div>
       </div>
       <!-- tp-footer-area-end -->
 
       <button class="scroll-top scroll-to-target" data-target="html">
          <i class="far fa-angle-double-up"></i>
-      </button>
+     </button>
 
 
    </footer>
 
+   <script>
+      // Firebase configuration (replace with your actual config)
+      const firebaseConfig = {
+         apiKey: "AIzaSyCAhFAGOvzbMnISAswkpTY5O6_uYCrPiRE",
+         authDomain: "mitcode-website-a7484.firebaseapp.com",
+         projectId: "mitcode-website-a7484",
+         storageBucket: "mitcode-website-a7484.appspot.com",
+         messagingSenderId: "873797743080",
+         appId: "1:873797743080:web:cf7256669ef0a7703ab45d",
+         measurementId: "G-HNQ74Z3HJ8"
+      };
+
+      // Initialize Firebase
+      const app = firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+
+      // Reference to form elements
+      const subscribeForm = document.querySelector('#subscribe-form');
+      const emailInput = document.querySelector('#email-input');
+      const subscribeButton = document.querySelector('#subscribe-button');
+
+      // ref to contact
+      const ContactForm = document.querySelector("#ContactForm");
+      const ContactName = document.querySelector("#ContactName");
+      const ContactEmail = document.querySelector("#ContactEmail");
+      const ContactMessage = document.querySelector("#ContactMessage");
+      const ContactButton = document.querySelector("#ContactButton");
+
+      ContactButton.addEventListener('click', function (event) {
+         event.preventDefault();
+         const name = ContactName.value;
+         const email = ContactEmail.value;
+         const message = ContactMessage.value;
+         if (name) {
+            if (email && validateEmail(email)) {
+               if (message) {
+                  ContactButton.innerHTML = "Sending..";
+                  db.collection('Messages').add({
+                     name: name,
+                     emailid: email,
+                     message: message,
+                     dateAndTime: new Date()
+                  }).then(() => {
+                     alert("Message sent!");
+                     ContactName.value = "";
+                     ContactEmail.value = "";
+                     ContactMessage.value = "";
+                     ContactButton.innerHTML = "Let's Talk";
+                  }).catch(error => {
+                     console.error("Error adding doc : ", error);
+                     alert("Failed to sent email")
+                  })
+               } else {
+                  alert("Please enter a message");
+               }
+            } else {
+               alert("Please enter a valid email address");
+            }
+         } else {
+            alert("Please enter your name");
+         }
+      })
+
+
+      // Listen for button click
+      subscribeButton.addEventListener('click', function (event) {
+         event.preventDefault();  // Prevent the page from reloading
+
+         const email = emailInput.value;  // Get the email value
+
+         // Check if email is valid
+         if (email && validateEmail(email)) {
+            subscribeButton.innerHTML = 'Subscribing...';
+            // Store the email in Firestore
+            db.collection('subscribers').add({
+               email: email,
+               subscribedAt: new Date()
+            })
+               .then(() => {
+                  alert("Subscribed!");
+                  emailInput.value = "";  // Clear the input field
+                  subscribeButton.innerHTML = 'Subscribe';
+               })
+               .catch(error => {
+                  console.error("Error adding document: ", error);
+                  alert("Failed to store email");
+               });
+         } else {
+            alert("Please enter a valid email.");
+         }
+      });
+
+      // Simple email validation
+      function validateEmail(email) {
+         const re = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+         return re.test(String(email).toLowerCase());
+      }
+   </script>
    <!-- JS here -->
    <script src="assets/js/jquery.js"></script>
    <script src="assets/js/waypoints.js"></script>

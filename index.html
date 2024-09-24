@@ -5,8 +5,10 @@
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
    <title>Mitcode - Innovative Software Solutions and Development</title>
-   <meta name="description" content="Mitcode provides customized software solutions, including mobile and web app development. Get in touch with us to bring your ideas to life. Discover more about our services, team, and contact information." />
-   <meta name="keywords" content="Mitcode, software solutions, mobile app development, web development, tech innovation, contact Mitcode, software development services, Calicut tech company, Mirza Aman" />
+   <meta name="description"
+      content="Mitcode provides customized software solutions, including mobile and web app development. Get in touch with us to bring your ideas to life. Discover more about our services, team, and contact information." />
+   <meta name="keywords"
+      content="Mitcode, software solutions, mobile app development, web development, tech innovation, contact Mitcode, software development services, Calicut tech company, Mirza Aman" />
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
    <!-- Place favicon.ico in the root directory -->
@@ -25,6 +27,8 @@
    <link rel="stylesheet" href="assets/css/magnific-popup.css">
    <link rel="stylesheet" href="assets/css/spacing.css">
    <link rel="stylesheet" href="assets/css/style.css">
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 </head>
 
 <body>
@@ -32,8 +36,8 @@
    <!-- preloader -->
    <div id="preloader">
       <div class="preloader">
-            <span></span>
-            <span></span>
+         <span></span>
+         <span></span>
       </div>
    </div>
    <!-- preloader end  -->
@@ -58,13 +62,8 @@
                            </li>
                            <li><a href="about-us.html">About</a>
                            </li>
-                           <!-- <li><a href="case-details.html">Our Project</a>
-                           </li> -->
                            <li><a href="service.html">Services</a>
-                              <!-- <ul class="submenu">
-                                 <li><a href="service.html">Service</a></li>
-                                 <li><a href="service-details.html">Service Details</a></li>
-                              </ul> -->
+
                            </li>
                            <li><a href="contact.html">Contact</a>
                            </li>
@@ -74,7 +73,7 @@
                      </nav>
                   </div>
                   <div class="tp-header-right">
-                     <ul>                           
+                     <ul>
                         <li><a class="tp-menu-bar" href="javascript:void(0)"><i class="fas fa-bars"></i></a></li>
                      </ul>
                   </div>
@@ -86,7 +85,7 @@
    </header>
 
    <!-- tp-offcanvus-area-start -->
-      <div class="tp-offcanvas-area">
+   <div class="tp-offcanvas-area">
       <div class="tpoffcanvas">
          <div class="tpoffcanvas__close-btn">
             <button class="close-btn"><i class="fal fa-times"></i></button>
@@ -97,7 +96,8 @@
             </a>
          </div>
          <div class="tpoffcanvas__text">
-            <p>At Mitcode, we believe in building powerful software solutions tailored to your needs. Whether it's a mobile app or web platform, we’re here to bring your ideas to life.</p>
+            <p>At Mitcode, we believe in building powerful software solutions tailored to your needs. Whether it's a
+               mobile app or web platform, we’re here to bring your ideas to life.</p>
          </div>
          <div class="mobile-menu"></div>
          <div class="tpoffcanvas__info">
@@ -126,7 +126,8 @@
                </div>
                <div class="tpoffcanvas__info-address">
                   <span>Location</span>
-                  <a href="https://www.google.com/maps/@37.4801311,22.8928877,3z" target="_blank">Kunnamangalam Calicut, Kerala India</a>
+                  <a href="https://www.google.com/maps/@37.4801311,22.8928877,3z" target="_blank">Kunnamangalam Calicut,
+                     Kerala India</a>
                </div>
             </div>
          </div>
@@ -134,14 +135,12 @@
             <div class="social-icon">
                <a href="https://x.com/mitcodehome"><i class="fab fa-twitter"></i></a>
                <a href="https://www.instagram.com/mitcodehome/"><i class="fab fa-instagram"></i></a>
-               <!-- <a href="#"><i class="fab fa-facebook-square"></i></a>
-               <a href="#"><i class="fab fa-dribbble"></i></a> -->
             </div>
          </div>
       </div>
-      </div>
-   
-      <div class="body-overlay"></div>
+   </div>
+
+   <div class="body-overlay"></div>
    <!-- tp-offcanvus-area-end -->
 
    <main>
@@ -152,37 +151,38 @@
                <div class="col-xl-6 col-lg-6">
                   <div class="tp-hero">
                      <div class="tp-hero__section-box">
-                        <h4 class="tp-section-subtitle  wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".3s">Transforming Ideas into Reality</h4>
-                        <h2 class="tp-slider-title wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".6s">Innovate, build, and grow with Mitcode</h2>
-                        <p class="wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".8s">We specialize in turning ideas into impactful software products, with a focus on web and mobile development, backed by industry-leading expertise.</p>
+                        <h4 class="tp-section-subtitle  wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".3s">
+                           Transforming Ideas into Reality</h4>
+                        <h2 class="tp-slider-title wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".6s">Innovate,
+                           build, and grow with Mitcode</h2>
+                        <p class="wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".8s">We specialize in turning
+                           ideas into impactful software products, with a focus on web and mobile development, backed by
+                           industry-leading expertise.</p>
                      </div>
-                     <div class="tp-hero__wrapper d-flex align-items-center wow tpfadeUp" data-wow-duration=".7s" data-wow-delay="1s">
+                     <div class="tp-hero__wrapper d-flex align-items-center wow tpfadeUp" data-wow-duration=".7s"
+                        data-wow-delay="1s">
                         <div class="tp-hero__button">
                            <a class="tp-btn" href="contact.html">Contact Us</a>
                         </div>
-                        <!-- <div class="tp-hero__play-button">
-                           <a class="popup-video" href="https://www.youtube.com/watch?v=hiEb1m7CXH4"><i
-                                 class="fas fa-play"></i></a>
-                           <span>See Inside</span>
-                        </div> -->
                      </div>
                   </div>
                </div>
                <div class="col-xl-6 col-lg-6">
                   <div class="tp-hero__wrapper-thumb p-relative">
                      <div class="tp-hero-shape-one">
-                        <img src="assets/img/slider/hero-star-shape.png "  alt="">
+                        <img src="assets/img/slider/hero-star-shape.png " alt="">
                      </div>
                      <div class="tp-hero-shape-two">
                         <img src="assets/img/slider/hero-circle-shape.png " alt="">
                      </div>
                      <div class="tp-hero-shape-three">
-                        <img src="assets/img/slider/hero-angel-shape.png "  alt="">
+                        <img src="assets/img/slider/hero-angel-shape.png " alt="">
                      </div>
                      <div class="tp-hero-shape-four">
                         <img src="assets/img/slider/hero-star-sm-shape.png" alt="">
                      </div>
-                     <div class="tp-hero__thumb text-start text-lg-end wow tpfadeRight"  data-wow-duration=".9s" data-wow-delay="1.2s">
+                     <div class="tp-hero__thumb text-start text-lg-end wow tpfadeRight" data-wow-duration=".9s"
+                        data-wow-delay="1.2s">
                         <img src="assets/img/slider/hero-1.png" alt="">
                      </div>
                   </div>
@@ -193,7 +193,8 @@
                   <div class="tp-slider-exprience">
                      <div class="tp-slider-exprience__content">
                         <h4 class="tp-slider-exp-title">Years of Passion and Innovation</h4>
-                        <p>“Technology has been my lifeline, and now it's my mission to use it to bring visions to life.”</p>
+                        <p>“Technology has been my lifeline, and now it's my mission to use it to bring visions to
+                           life.”</p>
                      </div>
                      <div class="tp-slider-exprience__client-info d-flex align-items-center">
                         <div class="tp-slider-exprience__img">
@@ -307,7 +308,8 @@
       <div class="tp-about-area ab-area-sapce pt-120 pb-120">
          <div class="container">
             <div class="row align-items-center">
-               <div class="col-xl-5 col-lg-5 order-2 order-lg-1 wow tpfadeLeft" data-wow-duration=".7s" data-wow-delay=".5s">
+               <div class="col-xl-5 col-lg-5 order-2 order-lg-1 wow tpfadeLeft" data-wow-duration=".7s"
+                  data-wow-delay=".5s">
                   <div class="tp-ab-wrapper p-relative">
                      <div class="tp-ab-shape-one z-index-3">
                         <img src="assets/img/about/about-shape-1.png" alt="">
@@ -320,11 +322,14 @@
                      </div>
                   </div>
                </div>
-               <div class="col-xl-7 col-lg-7 order-1 order-lg-2 wow tpfadeRight" data-wow-duration=".7s" data-wow-delay=".7s">
+               <div class="col-xl-7 col-lg-7 order-1 order-lg-2 wow tpfadeRight" data-wow-duration=".7s"
+                  data-wow-delay=".7s">
                   <div class="tp-ab-section-title-box">
                      <h4 class="tp-section-subtitle tp-green-color">Who we are?</h4>
                      <h3 class="tp-section-title">We are dynamic team of creative design and development</h3>
-                     <p>We are a passionate team of software developers, UI/UX designers, and data researchers focused on turning ideas into software solutions. Mitcode creates innovative web and mobile applications that help businesses grow.</p>
+                     <p>We are a passionate team of software developers, UI/UX designers, and data researchers focused
+                        on turning ideas into software solutions. Mitcode creates innovative web and mobile applications
+                        that help businesses grow.</p>
                      <a class="tp-btn" href="about-us.html">About our Agency</a>
                   </div>
                </div>
@@ -354,7 +359,8 @@
                      <div class="col-12 wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".7s">
                         <div class="tp-service-item mb-20 d-flex justify-content-between">
                            <div class="tp-service-item__content">
-                              <h4 class="tp-service-sm-title"><a href="service-details.html">Web <br> Development</a></h4>
+                              <h4 class="tp-service-sm-title"><a href="service-details.html">Web <br> Development</a>
+                              </h4>
                               <div class="tp-service-item__button-link">
                                  <a href="service-details.html">
                                     <span>
@@ -384,7 +390,8 @@
                      <div class="col-12 wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".9s">
                         <div class="tp-service-item sv-color-blue-one mb-20 d-flex justify-content-between">
                            <div class="tp-service-item__content">
-                              <h4 class="tp-service-sm-title"><a href="service-details.html">Mobile app <br> Development</a></h4>
+                              <h4 class="tp-service-sm-title"><a href="service-details.html">Mobile app <br>
+                                    Development</a></h4>
                               <div class="tp-service-item__button-link">
                                  <a href="service-details.html">
                                     <span>
@@ -414,7 +421,8 @@
                      <div class="col-12 wow tpfadeUp" data-wow-duration=".7s" data-wow-delay="1s">
                         <div class="tp-service-item sv-color-blue-two mb-20 d-flex justify-content-between">
                            <div class="tp-service-item__content">
-                              <h4 class="tp-service-sm-title"><a href="service-details.html">Any kind Custom <br> Solution</a></h4>
+                              <h4 class="tp-service-sm-title"><a href="service-details.html">Any kind Custom <br>
+                                    Solution</a></h4>
                               <div class="tp-service-item__button-link">
                                  <a href="service-details.html">
                                     <span>
@@ -455,23 +463,6 @@
       <div class="tp-footer-area footer-bg pt-130" data-background="assets/img/footer/footer-bg.png">
          <div class="container">
             <div class="row">
-               <!-- <div class="col-xl-2 col-lg-2 col-md-3 col-6 mb-30">
-                  <div class="tp-footer-widget z-index-3">
-                     <div class="tp-footer-widget__title">
-                        <h4 class="tp-footer-title">Product</h4>
-                     </div>
-                     <div class="tp-footer-widget__list">
-                        <ul>
-                           <li><a href="index.html">Go Top</a></li>
-                           <li><a href="#">Popup Builder</a></li>
-                           <li><a href="#">Web-design</a></li>
-                           <li><a href="#">Content</a></li>
-                           <li><a href="#">Integrations</a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div> -->
-               
                <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-30">
                   <div class="tp-footer-widget z-index-3">
                      <div class="tp-footer-widget__title">
@@ -480,17 +471,17 @@
                      <div class="tp-footer-widget__list">
                         <ul class="footer-position">
                            <li><a>
-                              <span><i class="fal fa-map-marker-alt"></i></span>
-                              Kunnamangalam
-                              Calicut, Kerala</a>
+                                 <span><i class="fal fa-map-marker-alt"></i></span>
+                                 Kunnamangalam
+                                 Calicut, Kerala</a>
                            </li>
                            <li><a href="mailto:support@figma">
-                              <span><i class="fal fa-envelope-open"></i></span>
-                              mitcoode@gmail.com</a>
+                                 <span><i class="fal fa-envelope-open"></i></span>
+                                 mitcoode@gmail.com</a>
                            </li>
                            <li><a href="tel:778886664">
-                              <span><i class="fal fa-phone-alt"></i></span>
-                               (91) 8129004343 </a>
+                                 <span><i class="fal fa-phone-alt"></i></span>
+                                 (91) 8129004343 </a>
                            </li>
                         </ul>
                      </div>
@@ -511,10 +502,12 @@
                         <div class="col-lg-6 col-md-12 col-12">
                            <div class="tp-newsletter">
                               <div class="tp-newsletter__input p-relative">
-                                 <form action="#">
-                                    <input type="email" placeholder="Enter your mail">
-                                    <button class="tp-btn-yellow">Subscribe <i class="far fa-arrow-right"></i></button>
-                                 </form>
+                                 <div id="subscribe-form">
+                                    <input type="email" id="email-input" placeholder="Enter your mail" required>
+                                    <button type="submit" class="tp-btn-yellow" id="subscribe-button">
+                                       Subscribe <i class="far fa-arrow-right"></i>
+                                    </button>
+                                 </div>
                               </div>
                            </div>
                         </div>
@@ -526,30 +519,79 @@
                <div class="row">
                   <div class="col-xl-6 col-lg-7 col-12">
                      <div class="copyright-left text-center text-lg-start">
-                        <p>©Copy RIght @2024 All Rights Reserved - MIT code Digital Agency</p>
+                        <p>©Copy RIght @2024 All Rights Reserved - MIT Code</p>
                      </div>
                   </div>
-                  <!-- <div class="col-xl-6 col-lg-5 col-12">
-                     <div class="copyright-right-side text-center text-lg-end">
-                        <ul>
-                           <li><a href="#">Privacy Policy</a></li>
-                           <li><a href="#">Terms of Use</a></li>
-                           <li><a href="#">Sales and Refunds</a></li>
-                        </ul>
-                     </div>
-                  </div> -->
                </div>
-           </div>
+            </div>
          </div>
       </div>
       <!-- tp-footer-area-end -->
 
       <button class="scroll-top scroll-to-target" data-target="html">
          <i class="far fa-angle-double-up"></i>
-     </button>
+      </button>
 
 
    </footer>
+
+
+
+   <script>
+      // Firebase configuration (replace with your actual config)
+      const firebaseConfig = {
+         apiKey: "AIzaSyCAhFAGOvzbMnISAswkpTY5O6_uYCrPiRE",
+         authDomain: "mitcode-website-a7484.firebaseapp.com",
+         projectId: "mitcode-website-a7484",
+         storageBucket: "mitcode-website-a7484.appspot.com",
+         messagingSenderId: "873797743080",
+         appId: "1:873797743080:web:cf7256669ef0a7703ab45d",
+         measurementId: "G-HNQ74Z3HJ8"
+      };
+
+      // Initialize Firebase
+      const app = firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+
+      // Reference to form elements
+      const subscribeForm = document.querySelector('#subscribe-form');
+      const emailInput = document.querySelector('#email-input');
+      const subscribeButton = document.querySelector('#subscribe-button');
+
+      // Listen for button click
+      subscribeButton.addEventListener('click', function (event) {
+         event.preventDefault();  // Prevent the page from reloading
+
+         const email = emailInput.value;  // Get the email value
+
+         // Check if email is valid
+         if (email && validateEmail(email)) {
+            subscribeButton.innerHTML = 'Subscribing...'; 
+            // Store the email in Firestore
+            db.collection('subscribers').add({
+               email: email,
+               subscribedAt: new Date()
+            })
+               .then(() => {
+                  alert("Subscribed!");
+                  emailInput.value = "";  // Clear the input field
+                  subscribeButton.innerHTML = 'Subscribe';
+               })
+               .catch(error => {
+                  console.error("Error adding document: ", error);
+                  alert("Failed to store email");
+               });
+         } else {
+            alert("Please enter a valid email.");
+         }
+      });
+
+      // Simple email validation
+      function validateEmail(email) {
+         const re = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+         return re.test(String(email).toLowerCase());
+      }
+   </script>
 
    <!-- JS here -->
    <script src="assets/js/jquery.js"></script>
@@ -566,8 +608,6 @@
    <script src="assets/js/imagesloaded-pkgd.js"></script>
    <script src="assets/js/ajax-form.js"></script>
    <script src="assets/js/main.js"></script>
-
-
 
 </body>
 

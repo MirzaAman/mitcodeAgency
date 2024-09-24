@@ -5,8 +5,10 @@
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
    <title>Mitcode - Contact Us for Custom Software Solutions</title>
-   <meta name="description" content="Get in touch with Mitcode for all your software development needs. Contact us to discuss your project, request a quote, or get more information about our services." />
-   <meta name="keywords" content="Mitcode, contact us, software development inquiries, request a quote, tech support, software solutions contact" />
+   <meta name="description"
+      content="Get in touch with Mitcode for all your software development needs. Contact us to discuss your project, request a quote, or get more information about our services." />
+   <meta name="keywords"
+      content="Mitcode, contact us, software development inquiries, request a quote, tech support, software solutions contact" />
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
    <!-- Place favicon.ico in the root directory -->
@@ -25,6 +27,8 @@
    <link rel="stylesheet" href="assets/css/magnific-popup.css">
    <link rel="stylesheet" href="assets/css/spacing.css">
    <link rel="stylesheet" href="assets/css/style.css">
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 </head>
 
 <body>
@@ -133,13 +137,14 @@
          </div>
       </div>
    </div>
-   
-      <div class="body-overlay"></div>
+
+   <div class="body-overlay"></div>
    <!-- tp-offcanvus-area-end -->
    <main>
 
       <!-- breadcrumb area start -->
-      <section class="breadcrumb__area breadcrumb-height include-bg p-relative" data-background="assets/img/breadcrumb/breadcurmb.jpg">
+      <section class="breadcrumb__area breadcrumb-height include-bg p-relative"
+         data-background="assets/img/breadcrumb/breadcurmb.jpg">
          <div class="container">
             <div class="row">
                <div class="col-xxl-12">
@@ -149,7 +154,7 @@
                         <span><a href="#">Home</a></span>
                         <span class="dvdr"><i class="fa fa-angle-right"></i></span>
                         <span>Contact Us</span>
-                      </div>
+                     </div>
                   </div>
                </div>
             </div>
@@ -172,13 +177,16 @@
                      <div class="contact-box__info-list">
                         <ul>
                            <li><a href="tel:4805550103"><i class="fal fa-phone-alt"></i> (91) 8129004343</a></li>
-                           <li><a href="https://www.google.com.bd/maps/@-26.7452242,128.312617,5.17z" target="_blank"><i class="fal fa-map-marker-alt"></i>Kunnamangalam, calicut India</a></li>
-                           <li><a href="mailto:mitcoode@gmail.com"><i class="fal fa-globe"></i>mitcoode@gmail.com</a></li>
+                           <li><a href="https://www.google.com.bd/maps/@-26.7452242,128.312617,5.17z" target="_blank"><i
+                                    class="fal fa-map-marker-alt"></i>Kunnamangalam, calicut India</a></li>
+                           <li><a href="mailto:mitcoode@gmail.com"><i class="fal fa-globe"></i>mitcoode@gmail.com</a>
+                           </li>
                         </ul>
                      </div>
                      <div class="contact-box__social">
                         <ul>
-                           <li><a href="https://www.instagram.com/mitcodehome/"><i class="fab fa-instagram"></i></a></li>
+                           <li><a href="https://www.instagram.com/mitcodehome/"><i class="fab fa-instagram"></i></a>
+                           </li>
                            <!-- <li><a href=""><i class="fab fa-facebook-f"></i></a></li> -->
                            <!-- <li><a href=""><i class="fab fa-linkedin"></i></a></li> -->
                            <li><a href="https://x.com/mitcodehome"><i class="fab fa-twitter"></i></a></li>
@@ -191,30 +199,31 @@
                   <div class="postbox__comment-form contact-wrapper">
                      <h3 class="postbox__comment-form-title">Send us a
                         Message</h3>
-                     <form action="#">
+                     <!-- contact form -->
+                     <div id="contact-form">
                         <div class="row">
                            <div class="col-12">
                               <div class="postbox__comment-input">
-                                 <input type="text" placeholder="Enter your name">
+                                 <input type="text" placeholder="Enter your name" id="name">
                               </div>
                            </div>
                            <div class="col-12">
                               <div class="postbox__comment-input">
-                                 <input type="email" placeholder="Enter your mail">
+                                 <input type="email" placeholder="Enter your mail" id="emailid">
                               </div>
                            </div>
                            <div class="col-12">
                               <div class="postbox__comment-input">
-                                 <textarea placeholder="Enter your message"></textarea>
+                                 <textarea placeholder="Enter your message" id="msg"></textarea>
                               </div>
                            </div>
                            <div class="col-12">
                               <div class="postbox__comment-btn">
-                                 <button type="submit" class="tp-btn">Let,s Talk</button>
+                                 <button type="submit" class="tp-btn" id="contactButton">Let,s Talk</button>
                               </div>
                            </div>
                         </div>
-                     </form>
+                     </div>
                   </div>
                </div>
             </div>
@@ -228,23 +237,6 @@
       <div class="tp-footer-area footer-bg pt-130" data-background="assets/img/footer/footer-bg.png">
          <div class="container">
             <div class="row">
-               <!-- <div class="col-xl-2 col-lg-2 col-md-3 col-6 mb-30">
-                  <div class="tp-footer-widget z-index-3">
-                     <div class="tp-footer-widget__title">
-                        <h4 class="tp-footer-title">Product</h4>
-                     </div>
-                     <div class="tp-footer-widget__list">
-                        <ul>
-                           <li><a href="index.html">Go Top</a></li>
-                           <li><a href="#">Popup Builder</a></li>
-                           <li><a href="#">Web-design</a></li>
-                           <li><a href="#">Content</a></li>
-                           <li><a href="#">Integrations</a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div> -->
-
                <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-30">
                   <div class="tp-footer-widget z-index-3">
                      <div class="tp-footer-widget__title">
@@ -284,10 +276,12 @@
                         <div class="col-lg-6 col-md-12 col-12">
                            <div class="tp-newsletter">
                               <div class="tp-newsletter__input p-relative">
-                                 <form action="#">
-                                    <input type="email" placeholder="Enter your mail">
-                                    <button class="tp-btn-yellow">Subscribe <i class="far fa-arrow-right"></i></button>
-                                 </form>
+                                 <div id="subscribe-form">
+                                    <input type="email" id="email-input" placeholder="Enter your mail" required>
+                                    <button type="submit" class="tp-btn-yellow" id="subscribe-button">
+                                       Subscribe <i class="far fa-arrow-right"></i>
+                                    </button>
+                                 </div>
                               </div>
                            </div>
                         </div>
@@ -299,18 +293,9 @@
                <div class="row">
                   <div class="col-xl-6 col-lg-7 col-12">
                      <div class="copyright-left text-center text-lg-start">
-                        <p>©Copy RIght @2024 All Rights Reserved - MIT code Digital Agency</p>
+                        <p>©Copy RIght @2024 All Rights Reserved - MIT Code</p>
                      </div>
                   </div>
-                  <!-- <div class="col-xl-6 col-lg-5 col-12">
-                     <div class="copyright-right-side text-center text-lg-end">
-                        <ul>
-                           <li><a href="#">Privacy Policy</a></li>
-                           <li><a href="#">Terms of Use</a></li>
-                           <li><a href="#">Sales and Refunds</a></li>
-                        </ul>
-                     </div>
-                  </div> -->
                </div>
             </div>
          </div>
@@ -324,6 +309,106 @@
 
    </footer>
 
+   <script>
+      // Firebase configuration (replace with your actual config)
+      const firebaseConfig = {
+         apiKey: "AIzaSyCAhFAGOvzbMnISAswkpTY5O6_uYCrPiRE",
+         authDomain: "mitcode-website-a7484.firebaseapp.com",
+         projectId: "mitcode-website-a7484",
+         storageBucket: "mitcode-website-a7484.appspot.com",
+         messagingSenderId: "873797743080",
+         appId: "1:873797743080:web:cf7256669ef0a7703ab45d",
+         measurementId: "G-HNQ74Z3HJ8"
+      };
+
+      // Initialize Firebase
+      const app = firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+
+      // Reference to form elements
+      const subscribeForm = document.querySelector('#subscribe-form');
+      const emailInput = document.querySelector('#email-input');
+      const subscribeButton = document.querySelector('#subscribe-button');
+
+      // reference to contact form
+      const contactForm = document.querySelector("#contact-form");
+      const contactName = document.querySelector("#name");
+      const contactEmailId = document.querySelector("#emailid");
+      const contactMessage = document.querySelector("#msg");
+      const contactButton = document.querySelector("#contactButton");
+
+      contactButton.addEventListener('click', function (event) {
+         event.preventDefault();
+
+         const name = contactName.value;
+         const emailid = contactEmailId.value;
+         const msg = contactMessage.value;
+
+         if (name) {
+            if (emailid && validateEmail(emailid)) {
+               if (msg) {
+                  contactButton.innerHTML = "Sending..";
+                  // store to firebase
+                  db.collection('Messages').add({
+                     name: name,
+                     emailid: emailid,
+                     message: msg,
+                     dateAndTime: new Date()
+                  }).then(() => {
+                     alert("Message sent!")
+                     contactName.value = "";
+                     contactEmailId.value = "";
+                     contactMessage.value = "";
+                     contactButton.innerHTML = "Let's Talk";
+                  }).catch(error => {
+                     console.error("Error adding document : ", error)
+                     alert("Failed to sent Message");
+                  })
+               } else {
+                  alert("Please enter your message")
+               }
+            } else {
+               alert("Please a valid email id")
+            }
+         } else {
+            alert("Please enter your name");
+         }
+      })
+
+      // Listen for button click
+      subscribeButton.addEventListener('click', function (event) {
+         event.preventDefault();  // Prevent the page from reloading
+
+         const email = emailInput.value;  // Get the email value
+
+         // Check if email is valid
+         if (email && validateEmail(email)) {
+            subscribeButton.innerHTML = 'Subscribing...';
+            // Store the email in Firestore
+            db.collection('subscribers').add({
+               email: email,
+               subscribedAt: new Date()
+            })
+               .then(() => {
+                  alert("Subscribed!");
+                  emailInput.value = "";  // Clear the input field
+                  subscribeButton.innerHTML = 'Subscribe';
+               })
+               .catch(error => {
+                  console.error("Error adding document: ", error);
+                  alert("Failed to store email");
+               });
+         } else {
+            alert("Please enter a valid email.");
+         }
+      });
+
+      // Simple email validation
+      function validateEmail(email) {
+         const re = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+         return re.test(String(email).toLowerCase());
+      }
+   </script>
    <!-- JS here -->
    <script src="assets/js/jquery.js"></script>
    <script src="assets/js/waypoints.js"></script>
