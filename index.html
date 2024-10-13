@@ -10,6 +10,15 @@
    <meta name="keywords"
       content="Mitcode, software solutions, mobile app development, web development, tech innovation, contact Mitcode, software development services, Calicut tech company, Mirza Aman" />
    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="robots" content="index, follow" />
+   <meta name="language" content="English">
+   <meta name="author" content="Mitcode, Mirza Aman">
+   <meta name="copyright" content="© 2024 Mitcode">
+   <meta name="rating" content="general">
+   <meta name="distribution" content="global">
+   <meta name="target" content="all">
+   <meta name="audience" content="all">
+
 
    <!-- Place favicon.ico in the root directory -->
    <link rel="shortcut icon" type="image/x-icon" href="ligomit.png">
@@ -566,7 +575,7 @@
 
          // Check if email is valid
          if (email && validateEmail(email)) {
-            subscribeButton.innerHTML = 'Subscribing...'; 
+            subscribeButton.innerHTML = 'Subscribing...';
             // Store the email in Firestore
             db.collection('subscribers').add({
                email: email,
